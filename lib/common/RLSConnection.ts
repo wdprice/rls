@@ -2,6 +2,7 @@ import { EntityMetadata, ReplicationMode, DataSource } from 'typeorm';
 import { RLSPostgresDriver } from '../common/RLSPostgresDriver';
 import {
   ActorId,
+  CustomSetting,
   TenancyModelOptions,
   TenantId,
 } from '../interfaces/tenant-options.interface';
@@ -12,6 +13,7 @@ export class RLSConnection extends DataSource {
 
   tenantId: TenantId = null;
   actorId: ActorId = null;
+  customSettings: CustomSetting = null;
 
   constructor(
     dataSource: DataSource,
